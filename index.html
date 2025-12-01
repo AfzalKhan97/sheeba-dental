@@ -66,12 +66,20 @@
 }
 
 .brand-title-img img {
-  height: 100px;       /* adjust if needed */
+  height: 100px;        /* desktop size */
   width: auto;
   object-fit: contain;
-  /* margin-left: -26px; */
   margin-top: -12px;
 }
+
+/* MOBILE RESPONSIVE FIX */
+@media (max-width: 600px) {
+  .brand-title-img img {
+    height: 60px;       /* smaller size for mobile */
+    margin-top: -6px;   /* adjust positioning */
+  }
+}
+
 
 
     /* Book Appointment Button Hover Animation */
