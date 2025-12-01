@@ -65,20 +65,30 @@
   align-items: center;
 }
 
+/* Desktop title image */
 .brand-title-img img {
-  height: 100px;        /* desktop size */
+  height: 60px;
   width: auto;
   object-fit: contain;
-  margin-top: -12px;
+  margin-top: 5px;
 }
 
-/* MOBILE RESPONSIVE FIX */
+/* Mobile (portrait phones) */
 @media (max-width: 600px) {
   .brand-title-img img {
-    height: 60px;       /* smaller size for mobile */
-    margin-top: -6px;   /* adjust positioning */
+    height: 100px;      /* bigger than before */
+    margin-top: 5px;  /* fix alignment */
   }
 }
+
+/* Extra small screens (very small phones) */
+@media (max-width: 400px) {
+  .brand-title-img img {
+    height: 70px;      /* still big, but fits */
+    margin-top: 5px;
+  }
+}
+
 
 
 
