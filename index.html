@@ -411,8 +411,19 @@
 
 /* small screens: hide the bar so it doesn't block content */
 @media (max-width:800px){
-  .floating-social{ display:none; }
+  .floating-social{
+    display:flex !important;
+    flex-direction:column;
+    right: 10px;
+    top: auto;
+    bottom: 20px;        /* move down so it doesn't block content */
+    transform: none;
+    padding: 8px;
+    border-radius:12px;
+  }
+  .floating-social .fs-item { width:42px; height:42px; font-size:18px; }
 }
+
 
 @media (max-width: 600px) {
   header.site-header { height: 64px; }
@@ -1058,7 +1069,7 @@ aria-label="Instagram"
   <!-- COPYRIGHT -->
   <div style="max-width:1200px;margin:18px auto 0;
               padding:0 22px;color:rgba(255,255,255,0.7);font-size:13px;">
-    © <span id="year">2025</span> Sheeba Dental & Face Aesthetics — All rights reserved
+    © <span id="year">2025</span> Copyright © 2025 sheebadental.in - All Rights Reserved.
   </div>
 </footer>
 
