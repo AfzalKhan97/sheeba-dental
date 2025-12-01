@@ -45,6 +45,7 @@
     .logo{
       width:70px;height:70px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;
       flex-shrink:0;background:none;
+  
     }
     .logo img{width:100%;height:100%;object-fit:contain;display:block}
     .brand-info{line-height:1}
@@ -65,10 +66,11 @@
 }
 
 .brand-title-img img {
-  height: 70px;       /* adjust if needed */
+  height: 100px;       /* adjust if needed */
   width: auto;
   object-fit: contain;
-  margin-left: 4px;
+  margin-left: -26px;
+  margin-top: -12px;
 }
 
 
@@ -575,6 +577,15 @@
 }
 
 
+/* Mobile fix: reduce header height so hero aligns perfectly */
+@media (max-width: 600px) {
+  :root {
+    --header-h: 60px;   /* adjust if needed: try 50–65px */
+  }
+}
+
+
+
 
   </style>
 </head>
@@ -613,11 +624,12 @@ aria-label="Instagram" class="fs-item instagram"><i class="fa-brands fa-square-i
       </nav>
 
       <div class="nav-actions">
-        <div class="phone">
+        <!-- <div class="phone">
           <div class="muted">Call us</div>
-          <div><a href="tel:+919985394787">+91 9985394787</a></div>
-        </div>
-        <a class="cta-btn" href="https://wa.me/919985394787
+          <div><a href="tel:+919985394787">9985394787</a></div>
+        </div> -->
+        <a class="cta-btn" href="https://wa.me/919985394787?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sheeba%20Dental.%20Please%20let%20me%20know%20the%20available%20timings.
+
 ">Book Appointment</a>
       </div>
     </div>
@@ -634,16 +646,17 @@ aria-label="Instagram" class="fs-item instagram"><i class="fa-brands fa-square-i
     <!-- LEFT: Title + caption -->
     <div class="hp-left">
       <h1 id="hero-title">Best Dental Clinic in Kakinada</h1>
-      <p class="muted">
+      <!-- <p class="muted">
         • Painless Dental treatments <br> 
         • Complete Family Dental Care <br> 
         • Affordable Prices
-      </p>
+      </p> -->
       <!-- optional short bullets -->
       <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;">
-        <span style="background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px">Pain-free treatments</span>
-        <span style="background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px">Advanced implants</span>
-        <span style="background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px">Cosmetic care</span>
+        <span style="background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px">Painless Dental treatments</span>
+        <span style="background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px">Complete Family Dental Care</span>
+        <span style="background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px">Affordable Prices</span>
+        <span style="background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px">Advanced Dental Technology</span>
       </div>
     </div>
 
@@ -665,7 +678,8 @@ aria-label="Instagram" class="fs-item instagram"><i class="fa-brands fa-square-i
           <span>Call Now</span>
         </a>
 
-        <a class="book-btn alt" href="https://wa.me/919985394787
+        <a class="book-btn alt" href="https://wa.me/919985394787?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sheeba%20Dental.%20Please%20let%20me%20know%20the%20available%20timings.
+
 " aria-label="Book appointment">Book Appointment</a>
       </div>
     </div>
@@ -677,7 +691,7 @@ aria-label="Instagram" class="fs-item instagram"><i class="fa-brands fa-square-i
     <!-- Treatments -->
     <section class="section" id="treatments" aria-labelledby="treatments-heading">
       <h2 id="treatments-heading">Our Treatments</h2>
-      <p class="muted">We offer a wide range of dental and cosmetic procedures. Tap a card to learn more.</p>
+      <p class="muted">We offer a wide range of dental and cosmetic procedures.</p>
 
       <div class="treat-grid" aria-live="polite">
         <!-- 1 -->
@@ -953,7 +967,8 @@ aria-label="Instagram" class="fs-item instagram"><i class="fa-brands fa-square-i
       <p class="muted">Working hours: Mon–Sun: 10:00AM – 2:00PM, 4:00PM – 8:00PM</p>
 
       <div style="margin-top:12px">
-        <a class="cta-btn" href="https://wa.me/919985394787
+        <a class="cta-btn" href="https://wa.me/919985394787?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sheeba%20Dental.%20Please%20let%20me%20know%20the%20available%20timings.
+
 "
 >Book Appointment</a>
       </div>
@@ -1025,7 +1040,7 @@ aria-label="Instagram"
   <!-- COPYRIGHT -->
   <div style="max-width:1200px;margin:18px auto 0;
               padding:0 22px;color:rgba(255,255,255,0.7);font-size:13px;">
-    © <span id="year">2025</span> Sheeba Dental & Cosmetic Clinic — All rights reserved
+    © <span id="year">2025</span> Sheeba Dental & Face Aesthetics — All rights reserved
   </div>
 </footer>
 
