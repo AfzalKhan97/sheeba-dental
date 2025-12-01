@@ -143,29 +143,30 @@
 }
 
 
-    /* ========== Hero ========== */
-    .hero{
-      min-height:calc(100vh - var(--header-h));
-      margin-top:var(--header-h);
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    /* linear-gradient(180deg, rgba(3,7,18,0.28), rgba(3,7,18,0.28)), */
-    url("HEROIMG.png");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  filter:brightness(0.75);
-  z-index:0;
+.hero {
+  min-height: calc(100vh - var(--header-h));
+  margin-top: var(--header-h);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("HEROIMG.png") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter:brightness(0.75);
+  z-index: 0;
+}
+
+
+
 
 .footer-grid .socials a:hover {
   transform: scale(1.15);
@@ -393,6 +394,15 @@
   .floating-social{ display:none; }
 }
 
+@media (max-width: 600px) {
+  header.site-header { height: 64px; }
+  .nav-wrap { padding: 8px 12px; }
+  .logo { width: 42px; height: 42px; }
+  .brand-title-img img { height: 32px; } /* reduce the name image */
+  .cta-btn { padding: 6px 10px; font-size: 12px; }
+}
+
+
 /* Hero glass panel and positioning */
 .hero .hero-content {
   position: relative;
@@ -407,10 +417,11 @@
 
 /* The translucent card (liquid glass) */
 /* The translucent card (liquid glass) */
+/* The translucent card (liquid glass) — adjusted */
 .hero .hero-panel {
   pointer-events: auto;
   margin-top: 60px;
-  margin-left: -950px;   /* <-- MOVE CARD LEFT */
+  margin-left: -950px;           /* << change this value to shift left (use -40 to -120) */
   width: min(1100px, 95%);
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
   border-radius: 16px;
@@ -426,6 +437,7 @@
   transform: translateY(0);
   transition: transform .35s ease, box-shadow .35s ease;
 }
+
 
 /* subtle float for the whole panel */
 .hero .hero-panel { animation: floatSoft 6s ease-in-out infinite; }
@@ -512,16 +524,24 @@
 }
 
 /* small device: stack columns */
-@media (max-width:900px){
+/* Mobile-specific: center & resize hero panel (overrides negative margin) */
+@media (max-width: 900px) {
   .hero .hero-panel {
-    grid-template-columns: 1fr;
-    text-align:center;
-    padding:18px;
-    margin-top:36px;
+    margin-left: 0 !important;      /* remove negative offset on phones/tablets */
+    width: 92% !important;
+    padding: 20px 16px !important;
+    grid-template-columns: 1fr !important; /* stack columns vertically */
+    gap: 16px;
+    margin-top: 36px;
+    box-shadow: 0 10px 28px rgba(2,8,23,0.35);
+    backdrop-filter: blur(8px) saturate(120%);
   }
-  .hero .hero-panel .hp-right { align-items:center; text-align:center; }
-  .hero .hero-panel .hp-left h1 { font-size:24px; }
+
+  .hero .hero-panel .hp-left h1 { font-size: 22px !important; }
+  .hero .hero-panel .hp-left p  { font-size: 13px !important; }
+  .hero .hero-panel .hp-right     { align-items: center !important; text-align: center !important; }
 }
+
 
 /* reduce motion/perf: disable float for small screens */
 @media (prefers-reduced-motion: reduce) {
