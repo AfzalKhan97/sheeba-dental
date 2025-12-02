@@ -173,7 +173,7 @@
   overflow: hidden;
 }
 
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -183,7 +183,23 @@
   background-repeat: no-repeat;
   filter:brightness(0.75);
   z-index: 0;
+} */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("HEROIMG.png") center/cover no-repeat;
+  z-index: 0;
 }
+
+/* When screen width is below 768px → switch image */
+@media (max-width: 768px) {
+  .hero::before {
+    background: url("HEROMOBILE.png") center/cover no-repeat;
+  }
+}
+
 
 
 
